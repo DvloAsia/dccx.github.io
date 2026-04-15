@@ -1,0 +1,432 @@
+/* 双语 DccX 网站 - 主样式 */
+
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8fafc;
+}
+
+/* 语言切换按钮 */
+.language-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.lang-btn {
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lang-btn:hover {
+    background: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3498db;
+    letter-spacing: -1px;
+}
+
+.navbar .logo span {
+    color: #2c3e50;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight:進入 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+    background-color: #f0f8ff;
+}
+
+.nav-links a.active {
+    color: #3498db;
+    background-color: #f0f8ff;
+}
+
+/* 英雄区域 */
+.hero {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    color: white;
+    padding: 80px 30px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 30px;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero .subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero .description {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.85;
+    line-height: 1.8;
+}
+
+.hero .buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 16px 32px;
+    background-color: #ffffff;
+    color: #3498db;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #3498db;
+}
+
+/* 功能区域 */
+.features {
+    padding: 60px 30px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #e6e9ef;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    border-color: #3498db;
+}
+
+.feature-card i {
+    color: #3498db;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #5a6a85;
+    line-height: 1.7;
+}
+
+/* 示例区域 */
+.example {
+    padding: 60px 30px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 20px;
+    margin: 30px;
+}
+
+.example h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3498db;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.code-container {
+    background-color: #1a1f2e;
+    border-radius: 16px;
+    padding: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.code {
+    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+    color: #e6e6e6;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.code .keyword {
+    color: #3498db;
+}
+
+.code .comment {
+    color: #5a6a85;
+}
+
+.code .function {
+    color: #ff7b72;
+}
+
+.code .string {
+    color: #a5ff90;
+}
+
+.code .number {
+    color: #ffd166;
+}
+
+/* 下载区域 */
+.download {
+    padding: 60px 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    margin: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.download h2 {
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.download-platforms {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.platform {
+    background-color: #f0f8ff;
+    padding: 25px;
+    border-radius: 16px;
+    min-width: 220px;
+    border: 1px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.platform:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.2);
+}
+
+.platform h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.platform .version {
+    color: #3498db;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.platform p {
+    color: #5a6a85;
+    margin-bottom: 20px;
+}
+
+/* 页脚 */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.copyright {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+/* 响应式设计 - 通用 */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero .subtitle {
+        font-size: 18px;
+    }
+    
+    .hero .description {
+        font-size: 16px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .features-grid, .download-platforms {
+        grid-template-columns: 1fr;
+    }
+    
+    .download-platforms {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .platform {
+        min-width: auto;
+    }
+}
+
+@media (max-width: calc(576px)) {
+    .hero {
+        margin: 15px;
+        padding: 50px 20px;
+    }
+    
+    .features, .example, .download {
+        margin: 15px;
+        padding: 40px 20px;
+    }
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .footer {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: calc(400px)) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero .subtitle {
+        font-size: 16px;
+    }
+    
+    .hero .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+}

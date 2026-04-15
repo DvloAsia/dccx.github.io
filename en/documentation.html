@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DccX Documentation | English Version</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 语言切换按钮样式 */
+        .language-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+        }
+        
+        .language-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            min-width: 80px;
+        }
+        
+        .lang-btn:hover {
+            background: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .lang-btn.active {
+            background: #3498db;
+            color: white;
+        }
+        
+        /* 额外样式 */
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-feature {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-feature:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+        }
+        
+        .hero-feature i {
+            font-size: 40px;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .hero-feature h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .hero-feature p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+        }
+        
+        /* 特色卡片 */
+        .feature-highlight {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 900px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(52, 152, 219, 0.4);
+        }
+        
+        .feature-highlight h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .feature-highlight p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+        
+        /* 代码演示 */
+        .code-demo {
+            background: #1a1f2e;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+        
+        .code-demo-title {
+            text-align: center;
+            color: #3498db;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- 语言切换按钮 -->
+    <div class="language-switch" id="language-switch">
+        <!-- JavaScript 会自动生成按钮 -->
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">DccX<span></span></div>
+        <div class="nav-links">
+            <a href="#features" class="active">Features</a>
+            <a href="#examples">Examples</a>
+            <a href="#download">Download</a>
+            <a href="#community">Community</a>
+            <a href="#documentation">Documentation</a>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <h1>DccX Documentation</h1>
+        <div class="subtitle">Complete guide to DccX programming language</div>
+        <div class="description">
+            DccX is an innovative programming language that integrates the convenience of Shell scripting, 
+            the powerful performance of C, and the advanced features of C++. 
+            It provides a comprehensive solution for system programming, script development, 
+            and application building. Developers no longer need to switch between different 
+            languages and technology stacks, as DccX offers all-round programming capabilities 
+            within a unified framework.
+        </div>
+        <div class="buttons">
+            <button class="btn" onclick="scrollToSection('download')">Download Now</button>
+            <button class="btn-secondary" onclick="scrollToSection('examples')">View Examples</button>
+        </div>
+        
+        <!-- 核心特性 -->
+        <div class="hero-features">
+            <div class="hero-feature">
+                <i class="fas fa-terminal"></i>
+                <h3>Shell Integration</h3>
+                <p>Execute system commands directly in code</p>
+            </div>
+            <div class="hero-feature">
+                <i class="fas fa-code"></i>
+                <h3>C Language Performance</h3>
+                <p>C-level low-level performance and memory management</p>
+            </div>
+            <div class="hero-feature">
+                <i class="fas fa-object-group"></i>
+                <h3>C++ Features</h3>
+                <p>Object-oriented, templates, exception handling</p>
+            </div>
+            <div class="hero-feature">
+                <i class="fas fa-robot"></i>
+                <h3>AI Assistant</h3>
+                <p>Intelligent code generation and error diagnosis</p>
+            </ddiv>
+        </div>
+    </section>
+
+    <!-- 核心特性区域 -->
+    <section class="features" id="features">
+        <h2>Core Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-terminal"></i>
+                <h3>Direct Shell Command Execution</h3>
+                <p>Call system commands without leaving the program environment, simplifying script writing.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>C Language High Performance</h3>
+                <p>Direct memory management, pointer operations, system-level programming capabilities.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-layer-group"></i>
+                <h3>C++ Object-Oriented</h3>
+                <p>Classes, inheritance, polymorphism, templates, exceptions and other advanced features.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-brain"></i>
+                <h3>AI Assisted Development</h3>
+                <p>Built-in AI assistant, intelligent code generation, automated error fixing.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Cross-Platform Support</h3>
+                <p>Full platform support for Termux, Linux, Windows, macOS.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-globe"></i>
+                <h3>Mixed Syntax Design</h3>
+                <p>Innovative syntax, perfectly integrating multiple programming paradigms.</p>
+            </div>
+        </div>
+        
+        <div class="feature-highlight">
+            <h3>Revolutionary Hybrid Programming Experience</h3>
+            <p>
+                DccX breaks the boundaries of traditional programming languages, allowing developers 
+                to seamlessly use Shell commands, C-style memory management, and C++ object-oriented 
+                features within the same file. Whether for system scripts, high-performance applications, 
+                or complex data processing, DccX provides the best development experience.
+            </p>
+        </div>
+    </section>
+
+    <!-- 示例区域 -->
+    <section class="example" id="examples">
+        <h2>Code Examples</h2>
+        <div class="code-container">
+            <div class="code">
+                <pre><span class="comment"># DccX Example - File Processing and Data Analysis</span>
+<span class="keyword">import</span> sys
+<span class="keyword">import</span> math
+
+<span class="keyword">func</span> <span class="function">analyze_directory</span>(path: str): dict {
+    <span class="comment"># Shell command to get directory statistics</span>
+    files = exec(<span class="string">"find " + path + " -type f -name '*.txt'"</span>)
+    
+    <span class="comment"># C-style memory operations</span>
+    buffer = malloc(1024)
+    memcpy(buffer, "analysis", 8)
+    
+    <span class="comment"># Define analysis result class</span>
+    class <span class="keyword">AnalysisResult</span> {
+        file_count: num
+        total_size: num
+        average_size: num
+        
+        init(files_count, total_size) {
+            this.file_count = files_count
+            this.total_size = total_size
+            this.average_size = total_size / files_count
+        }
+        
+        func <span class="function">print_report</span>() {
+            print(<span class="string">"File count: " + this.file_count</span>)
+            print(<span class="string">"Total size: " + this.total1_size + " bytes"</span>)
+            print(<span class="string">"Average size: " + this.average_size + " bytes"</span>)
+        }
+    }
+    
+    <span class="comment"># Statistics processing</span>
+    count = 0
+    total = 0
+    for file in files.split(<span class="string">"\n"</span>) {
+        if file != <span class="string">""</span> {
+            <span class="comment"># Get file size</span>
+            size_str = exec(<span class="string">"stat -c%s " + file</span>)
+            size = size_str.to_num()
+            total += size
+            count += 1
+            
+            <span class="comment"># Output file information</span>
+            print(<span class="string">file + ": " + size_str + " bytes"</span>)
+        }
+    }
+    
+    <span class="comment"># Create analysis result object</span>
+    result = AnalysisResult(count, total)
+    
+    <span class="comment"># Output report</span>
+    result.print_report()
+    
+    <span class="comment"># Clean up memory</span>
+    free(buffer)
+    
+    <span class="comment"># Return results</span>
+    return {
+        <span class="string">"count"</span>: count,
+        <span class="string">"total_size"</span>: total,
+        <span class="string">"average_size"</span>: total / count
+    }
+}
+
+<span class="keyword"># Main function</span>
+<span class="keyword">main</span> {
+    <span class="comment"># Call analysis function</span>
+    data = analyze_directory(<span class="string">"."</span>)
+    
+    <span class="comment"># Shell command output</span>
+    shell(<span class="string">"echo Analysis completed"</span>)
+    
+    <span class="comment"># Output JSON format result</span>
+    print(<span class="string">JSON.stringify(data)</span>)
+}</pre>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <button class="btn" onclick="showMoreExamples()">More Examples</button>
+        </div>
+        
+        <div class="code-demo">
+            <div class="code-demo-title">Hybrid Programming Example</div>
+            <div class="code">
+                <pre><span class="comment"># Shell Command + C Memory + C++ Objects</span>
+<span class="keyword">func</span> <span class="function">process_images</span>() {
+    <span class="comment"># Get all image files</span>
+    images = exec(<span class="string">"find ./images -type f -name '*.(jpg|png|gif)'"</span>)
+    
+    <span class="comment"># C++ style object management</span>
+    class <span class="keyword">ImageProcessor</span> {
+        files: list
+        
+        init(files) {
+            this.files = files
+        }
+        
+        func <span class="function">process</span>() {
+            processed_count = 0
+            for image in this.files {
+                <span class="comment"># Shell command to process images</span>
+                exec(<span class="string">"convert " + image + " -resize 800x600 processed_" + image</span>)
+                processed_count += 1
+            }
+            return processed_count
+        }
+    }
+    
+    processor = ImageProcessor(images.split(<span class="string">"\n"</span>))
+    result = processor.process()
+    
+    <span class="comment"># C-style output</span>
+    printf(<span class="string">"Processing completed: %d files"</span>, result)
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section class="download" id="download">
+        <h2>Download & Install</h2>
+        <div class="download-platforms">
+            <div class="platform">
+                <h3>Termux</h3>
+                <div class="version">v0.1.0</div>
+                <p>Complete development environment for Android</p>
+                <button class="btn" onclick="installTermux()">Install Guide</button>
+            </div>
+            <div class="platform">
+                <h3>Linux</h3>
+                <div class="version">v0.1.0</div>
+                <p>Support Ubuntu, Debian, Fedora and more</p>
+                <button class="btn" onclick="installLinux()">Download Package</button>
+            </div>
+            <div class="platform">
+                <h3>Windows</h3>
+                <div class="version">v0.1.0</div>
+                <p>Windows 10/11 compatible version</p>
+                <button class="btn" onclick="installWindows()">Download EXE</button>
+            </div>
+        </div>
+        <div style="margin-top: 1rem;">
+            <button class="btn-secondary">View All Versions</button>
+        </div>
+    </section>
+
+    <!-- 社区区域 -->
+    <section class="community" id="community">
+        <h2>Join the Community</h2>
+        <div class="community-grid">
+            <div class="community-card">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <p>Source code, issue discussions, contribution guidelines</p>
+            </div>
+            <div class="community-card">
+                <i class="fab fa-discord"></i>
+                <h3>Discord</h3>
+                <p>Real-time chat, technical support, community discussion</p>
+            </div>
+            <div class="community-card">
+                <i class="fab fa-reddit"></i>
+                <h3>Reddit</h3>
+                <p>Share experiences, ask questions, join discussions</p>
+            </div>
+            <div class="community-card">
+                <i class="fas fa-book"></i>
+                <h3>Documentation Wiki</h3>
+                <p>Official documentation, tutorials, best practices</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="btn" onclick="visitGitHub()">Visit GitHub</button>
+            <button class="btn-secondary" onclick="joinDiscord()">Join Discord</button>
+        </div>
+    </section>
+
+    <!-- 文档区域 -->
+    <section class="documentation" id="documentation">
+        <h2>Documentation System</h2>
+        <div class="doc-grid">
+            <div class="doc-card">
+                <h3>Getting Started</h3>
+                <ul>
+                    <li><a href="documentation.html#install">Installation Tutorial</a></li>
+                    <li><a href="documentation.html#quickstart">Quick Start</a></li>
+                    <li><a href="documentation.html#basic">Basic Syntax</a></li>
+                    <li><a href="documentation.html#variables">Variables and Types</a></li>
+                    <li><a href="documentation.html#functions">Function Definition</a></li>
+                </ul>
+            </div>
+            <div class="doc-card">
+                <h3>Advanced Features</h3>
+                <ul>
+                    <li><a href="documentation.html#oop">Object-Oriented Programming</a></li>
+                    <li><a href="documentation.html#memory">Memory Management</a></li>
+                    <li><a href="documentation.html#shell">Shell Integration</a></li>
+                    <li><a href="documentation.html#system">System Programming</a></li>
+                    <li><a href="documentation.html#async">Asynchronous Programming</a></li>
+                </ul>
+            </div>
+            <div class="doc-card">
+                <h3>Tools & Libraries</h3>
+                <ul>
+                    <li><a href="documentation.html#tools">Development Tools</a></li>
+                    <li><a href="documentation.html#stdlib">Standard Library</a></li>
+                    <li><a href="documentation.html#modules">Module System</a></li>
+                    <li><a href="documentation.html#debugging">Debugging Techniques</a></li>
+                    <li><a href="documentation.html#testing">Testing Framework</a></li>
+                </ul>
+            </div>
+            <div class="doc-card">
+                <h3>API Reference</h3>
+                <ul>
+                    <li><a href="documentation.html#api">Full API</a></li>
+                    <li><a href="documentation.html#modules-api">Module API</a></li>
+                    <li><a href="documentation.html#cli">Command Line Tools</a></li>
+                    <li><a href="documentation.html#config">Configuration Files</a></li>
+                    <li><a href="documentation.html#advanced">Advanced Configuration</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#features">Features</a>
+            <a href="#examples">Examples</a>
+            <a href="#docs">Documentation</a>
+            <a href="#community">Community</a>
+            <a href="#download">Download</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="copyright">
+            © 2024 DccX Project Team. Open Source License MIT License.
+        </div>
+    </footer>
+
+    <script src="../assets/js/language.js"></script>
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        function showMoreExamples() {
+            window.location.href = '../en/examples.html';
+        }
+        
+        function installTermux() {
+            alert('Termux Installation Command:\n\npkg update\npkg install git gcc make\ngit clone https://github.com/DvloAsia/DccX\ncd DccX\nmake\n./dccx');
+        }
+        
+        function installLinux() {
+            alert('Linux Installation Command:\n\nsudo apt update\nsudo apt install git gcc make\ngit clone https://github.com/DvloAsia/DccX\ncd DccX\nmake\nsudo make install');
+        }
+        
+        function installWindows() {
+            alert('Windows users please download pre-compiled EXE files or use MinGW to compile source code.');
+        }
+        
+        function visitGitHub() {
+            window.open('https://github.com/DvloAsia/DccX', '_blank');
+        }
+        
+        function joinDiscord() {
+            alert('Discord link coming soon, stay tuned!');
+        }
+        
+        // 平滑滚动
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    scrollToSection(targetId.slice(1));
+                }
+            });
+        });
+        
+        // 语言切换初始化
+        const languageSwitch = document.getElementById('language-switch');
+        const zhBtn = document.createElement('button');
+        zhBtn.className = 'lang-btn';
+        zhBtn.textContent = '中文';
+        zhBtn.dataset.lang = 'zh';
+        
+        const enBtn = document.createElement('button');
+        enBtn.className = 'lang-btn';
+        enBtn.textContent = 'English';
+        enBtn.dataset.lang = 'en';
+        enBtn.style.backgroundColor = '#3498db';
+        enBtn.style.color = 'white';
+        
+        zhBtn.addEventListener('click', () => {
+            zhBtn.style.backgroundColor = '#3498db';
+            zhBtn.style.color = 'white';
+            enBtn.style.backgroundColor = '#2c3e50';
+            enBtn.style.color = 'white';
+            window.location.href = '../zh/index.html';
+        });
+        
+        enBtn.addEventListener('click', () => {
+            enBtn.style.backgroundColor = '#3498db';
+            enBtn.style.color = 'white';
+            zhBtn.style.backgroundColor = '#2c3e50';
+            zhBtn.style.color = 'white';
+            // 当前已经是英文页，不需要跳转
+        });
+        
+        languageSwitch.appendChild(zhBtn);
+        languageSwitch.appendChild(enBtn);
+    </script>
+</body>
+</html>

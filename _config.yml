@@ -1,0 +1,44 @@
+# DccX GitHub Pages Configuration
+title: DccX Programming Language
+description: Revolutionary programming language combining Shell, C, and C++
+url: "https://dvloasia.github.io/DccX"
+baseurl: ""
+
+# Language Support
+languages:
+  - en
+  - zh
+
+# Navigation
+navigation:
+  main:
+    - title: Home
+      url: /
+    - title: Documentation
+      url: /documentation.html
+    - title: Examples
+      url: /examples.html
+    - title: Download
+      url: /download.html
+    - title: Community
+      url: /community.html
+
+# SEO
+seo:
+  title: DccX Programming Language
+  description: A revolutionary programming language combining Shell, C, and C++
+  keywords: programming language, shell, c, c++, compiler, ai assistant, development, bilingual
+
+# Social Media
+social:
+  github: dvloasia/DccX
+  twitter: DccXLanguage
+
+# Build Settings
+build:
+  output: docs
+  preserve_custom: true
+  preserve_dirs:
+    - assets
+    - zh
+    - en
